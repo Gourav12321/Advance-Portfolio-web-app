@@ -10,11 +10,7 @@ function Education() {
     const fetchData = async () => {
       try {
         const response = await axios.get('/api/admin/showeducation');
-        if (Array.isArray(response.data)) {
-          setData(response.data);
-        } else {
-          console.error('Response data is not an array:', response.data);
-        }
+        setData(response.data);
       } catch (error) {
         console.error('Error fetching education data:', error);
       }
@@ -22,7 +18,32 @@ function Education() {
     fetchData();
   }, []);
 
-  // Rest of the component...
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    refs.current.forEach(ref => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      refs.current.forEach(ref => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, [data]);
+
+  const handleShowCertificate = (index) => {
+    setShowCertificate(showCertificate === index ? null : index);
+  };
+
 
   return (
     <div className="text-white w-full">
