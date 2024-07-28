@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI)
  
 
 // Route middleware
-app.use('/admin', adminRoutes);
+app.use('/api/admin', adminRoutes);
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname,'/mern-portfolio/dist')))
 app.get('*', (req, res)=>{
