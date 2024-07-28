@@ -67,7 +67,7 @@ project-root/
   <ol>
     <li>
       <p>Clone the repository:</p>
-      <pre><code>git clone https://github.com/yourusername/mern-portfolio.git</code></pre>
+      <pre><code>git clone https://github.com/Gourav12321/Advance-Portfolio-web-app.git</code></pre>
     </li>
     <li>
       <p>Install dependencies:</p>
