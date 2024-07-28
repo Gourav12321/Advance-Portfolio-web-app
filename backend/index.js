@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI)
   app.use(express.static(path.join(__dirname,'/mern-portfolio/dist')))
   app.get('*', (req, res)=>{
      res.sendFile(path.join(__dirname, 'mern-portfolio','dist','index.html' ))
-  })
+  });
 
 
 // Route middleware
