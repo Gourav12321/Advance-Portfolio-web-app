@@ -90,7 +90,7 @@ function Home() {
             </p>
             <div>
               <button className="bg-[#FFC107] text-black font-semibold mt-4 text-[12px] px-7 py-3 hover:-translate-y-1 hover:transition-all hover:ease-in-out">
-                <a href="GouravMauryaResumee.pdf" download="Gourav Maurya CV">
+                <a href="GouravResumeUpdated.pdf" download="Gourav Maurya CV">
                   {" "}
                   Download CV
                 </a>
