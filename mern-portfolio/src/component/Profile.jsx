@@ -152,7 +152,7 @@ function Profile() {
           <div>
             <p>
               <a
-                href="GouravMauryaResumee.pdf"
+                href="GouravResumeUpdated.pdf"
                 download="Gourav Maurya CV"
                 className="text-[#707074] flex items-center gap-1 hover:text-white transition-all text-[13px]"
               >
